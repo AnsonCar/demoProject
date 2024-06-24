@@ -1,0 +1,24 @@
+# 使用 Python 官方映像檔作為基底
+FROM python:3.10.12-slim
+
+# setup workfile
+WORKDIR /app
+COPY . .
+
+# RUN apt-get install build-dep python-psycopg2
+
+# install python packages
+RUN pip install --upgrade pip
+RUN pip install Django==4.2.7
+RUN pip install django-ninja
+RUN pip install django-ninja-jwt
+
+RUN pip install psycopg2-binary
+RUN pip install python-dotenv
+RUN pip install uvicorn
+
+# RUN python manage.py makemigrations
+# RUN python manage.py migrate
+
+CMD [ "python", "manage.py", "runserver", "0.0.0.0:8000" ]
+# CMD ["python", "main.py"]

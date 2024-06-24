@@ -1,0 +1,18 @@
+# .env
+# .env.*
+# !.env.example
+
+db
+pgadmin
+.DS_Store
+.venv
+__pycache__
+node_modules
+.svelte-kit
+.vscode
+cache
+dist
+.vercel
+.output
+vite.config.js.timestamp-*
+vite.config.ts.timestamp-*
