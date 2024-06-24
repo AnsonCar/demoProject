@@ -13,7 +13,7 @@
 ## 快速部署
 ### docker
 ```bash
-docker-compose up -d
+docker compose up -d
 ```
 
 ## 項目結構
@@ -29,7 +29,6 @@ demoptoject     // 項目文件夾
 │   ├── db_api_ninja       // DataBase API 
 │   └── docker-compose.yml // BackEnd Docker Compose 配置文件
 └── frontend
-    ├── openapi-ts 
     └── docker-compose.yml // Frontend Docker Compose 配置文件
 ```
 
