@@ -21,7 +21,7 @@ docker compose up -d
 demoptoject     // 項目文件夾
 ├── README.md   // 概述
 ├── .gitignore  // git 忽略文件
-├── ocker-compose.yml // Docker Compose 配置文件
+├── docker-compose.yml // Docker Compose 配置文件
 ├── _document   // 相關文檔
 │   ├── changelog.md
 │   └── roadmap.md
@@ -30,6 +30,17 @@ demoptoject     // 項目文件夾
 │   └── docker-compose.yml // BackEnd Docker Compose 配置文件
 └── frontend
     └── docker-compose.yml // Frontend Docker Compose 配置文件
+```
+
+```
+db_api_ninja     // 項目文件夾
+├── db_api_ninja // 項目根目錄
+│   ├── api
+│   ├── db_api_ninja
+│   ├── main.py
+│   ├── manage.py
+│   └── start.sh
+└── dockerfile ` // Docker 配置文件
 ```
 
 ## 查閱更多

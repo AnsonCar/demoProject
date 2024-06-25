@@ -7,7 +7,7 @@ services:
     ports:
       - 8000:8000
     volumes:
-      - ./db_api_ninja:/app
+      - ./db_api_ninja/db_api_ninja:/app
     env_file:
       - .env
     environment:
