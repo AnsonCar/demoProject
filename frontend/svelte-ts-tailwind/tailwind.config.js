@@ -11,7 +11,7 @@ export default {
     themes: [
       {
         ...require("daisyui/src/theming/themes"),
-        ...require("./tonyapuzzle.config")
+        ...require("./theme.config")
       }
     ],
   },

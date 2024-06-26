@@ -3,7 +3,7 @@ FROM python:3.10.12-slim
 
 # setup workfile
 WORKDIR /app
-COPY ./db_api_ninja .
+COPY . .
 
 # RUN apt-get install build-dep python-psycopg2
 

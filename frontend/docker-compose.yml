@@ -1,0 +1,10 @@
+svelte-ts-tailwind:
+  build: 
+    context: ./svelte-ts-tailwind
+    dockerfile: dockerfile
+  container_name: svelte-ts-tailwind
+  ports:
+    - 5173:5173
+  volumes:
+    - ./svelte-ts-tailwind/svelte-ts-tailwind/src/lib:/app/src/lib
+    - ./svelte-ts-tailwindsrc/svelte-ts-tailwind/routes:/app/src/routes
