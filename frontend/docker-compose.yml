@@ -21,3 +21,4 @@ services:
       - ./nuxt-ts-tailwind/pages:/app/pages
       - ./nuxt-ts-tailwind/components:/app/components
       - ./nuxt-ts-tailwind/layouts:/app/layouts
+      - ./nuxt-ts-tailwind/middleware:/app/middleware

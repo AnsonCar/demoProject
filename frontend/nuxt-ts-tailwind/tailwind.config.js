@@ -15,9 +15,16 @@ export default {
   daisyui: {
     themes: [
       {
-        ...require("daisyui/src/theming/themes"),
-        ...require("./theme.config")
-      }
+        "carhyme-light" : {
+          ...require("./theme.config")["carhyme-light"]
+        }
+      },
+      {
+        "carhyme-dark" : {
+          ...require("./theme.config")["carhyme-dark"]
+        }
+      },
+      "light", "dark"
     ],
   },
 }

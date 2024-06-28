@@ -26,9 +26,6 @@ SECRET_KEY = 'django-insecure-yd@f7r7azj0z*))6g=z_6(scgfq*m#ib5pp#i8_n9l&xx6ywyl
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -38,6 +35,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    #
+    'corsheaders',
+    #
     'ninja_extra',
     'ninja_jwt',
     'api'
@@ -51,7 +51,21 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    # 
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware'
 ]
+
+CORS_ALLOWED_ORIGINS = [
+    'http://localhost:3000',
+    'http://127.0.0.1:3000',
+]
+
+ALLOWED_HOSTS = [
+    'localhost',
+    '127.0.0.1',
+]
+
 
 ROOT_URLCONF = 'db_api_ninja.urls'
 
@@ -79,14 +93,14 @@ WSGI_APPLICATION = 'db_api_ninja.wsgi.application'
 
 DATABASES = {
     'default': {
-        # 'ENGINE': 'django.db.backends.sqlite3',
-        # 'NAME': BASE_DIR / 'db.sqlite3',
-        "ENGINE": "django.db.backends.postgresql",
-        "NAME": os.getenv("POSTGRES_DB", "app"),
-        "USER": os.getenv("POSTGRES_USER", "admin"),
-        "PASSWORD": os.getenv("POSTGRES_PASSWORD", "admin"),
-        "HOST": os.getenv("POSTGRES_SERVER", "db"),
-        "PORT": os.getenv("POSTGRES_PORT", "5432"),
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+        # "ENGINE": "django.db.backends.postgresql",
+        # "NAME": os.getenv("POSTGRES_DB", "app"),
+        # "USER": os.getenv("POSTGRES_USER", "admin"),
+        # "PASSWORD": os.getenv("POSTGRES_PASSWORD", "admin"),
+        # "HOST": os.getenv("POSTGRES_SERVER", "db"),
+        # "PORT": os.getenv("POSTGRES_PORT", "5432"),
     }
 }
 

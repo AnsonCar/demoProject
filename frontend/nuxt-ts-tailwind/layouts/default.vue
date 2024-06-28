@@ -1,4 +1,3 @@
-<template>
-    <h2>I am Layout</h2>
-    <slot></slot>
+<template class="size-full">
+        <slot></slot>
 </template>
